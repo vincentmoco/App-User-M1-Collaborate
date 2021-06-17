@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws" xmlns:intf="http://ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="supprimerNote">
+    <complexType>
+     <sequence>
+      <element name="idEtudiant" type="xsd:string"/>
+      <element name="note" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="supprimerNoteResponse">
+    <complexType/>
+   </element>
+   <element name="ajouterNote">
+    <complexType>
+     <sequence>
+      <element name="idEtudiant" type="xsd:string"/>
+      <element name="note" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ajouterNoteResponse">
+    <complexType/>
+   </element>
+   <element name="listerNotes">
+    <complexType>
+     <sequence>
+      <element name="idEtudiant" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="listerNotesResponse">
+    <complexType>
+     <sequence>
+      <element name="listerNotesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifierNote">
+    <complexType>
+     <sequence>
+      <element name="idEtudiant" type="xsd:string"/>
+      <element name="note" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifierNoteResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="supprimerNoteRequest">
+
+      <wsdl:part element="impl:supprimerNote" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifierNoteResponse">
+
+      <wsdl:part element="impl:modifierNoteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ajouterNoteResponse">
+
+      <wsdl:part element="impl:ajouterNoteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifierNoteRequest">
+
+      <wsdl:part element="impl:modifierNote" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="listerNotesResponse">
+
+      <wsdl:part element="impl:listerNotesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="listerNotesRequest">
+
+      <wsdl:part element="impl:listerNotes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ajouterNoteRequest">
+
+      <wsdl:part element="impl:ajouterNote" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="supprimerNoteResponse">
+
+      <wsdl:part element="impl:supprimerNoteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Note">
+
+      <wsdl:operation name="supprimerNote">
+
+         <wsdl:input message="impl:supprimerNoteRequest" name="supprimerNoteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:supprimerNoteResponse" name="supprimerNoteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ajouterNote">
+
+         <wsdl:input message="impl:ajouterNoteRequest" name="ajouterNoteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ajouterNoteResponse" name="ajouterNoteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listerNotes">
+
+         <wsdl:input message="impl:listerNotesRequest" name="listerNotesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:listerNotesResponse" name="listerNotesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifierNote">
+
+         <wsdl:input message="impl:modifierNoteRequest" name="modifierNoteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:modifierNoteResponse" name="modifierNoteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="NoteSoapBinding" type="impl:Note">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="supprimerNote">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="supprimerNoteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="supprimerNoteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ajouterNote">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ajouterNoteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ajouterNoteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listerNotes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="listerNotesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="listerNotesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifierNote">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifierNoteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifierNoteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="NoteService">
+
+      <wsdl:port binding="impl:NoteSoapBinding" name="Note">
+
+         <wsdlsoap:address location="http://localhost:8080/Crudsoapv1/services/Note"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
