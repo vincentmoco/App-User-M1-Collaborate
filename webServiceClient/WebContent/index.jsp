@@ -12,7 +12,7 @@
     		<div class="contenu">
         		<h3>Services Etudiants</h3> 
 				<hr>
-				<div>
+				<div class="input-field">
 					<form action="http://localhost:8080/webServiceClient//EtudiantServlet" method="POST" id="etudiant" name="etudiant">
 						<div>
 							<label>nom Etudiant
@@ -32,15 +32,18 @@
 					</form>
 				</div>
 				<div>
-				 <input form="etudiant" type="submit" name="ajouterEtudiant" value="ajouterEtudiant">
-				 <input form="etudiant" type="submit" name="supprimerEtudiant" value="supprimerEtudiant">
-				 <input form="etudiant" type="submit" name="modifierEtudiant" value="modifierEtudiant">
+					<select name="options-list">
+						<option value="ajouter">ajouter un étudiant</option>
+						<option value="modifier">modifier un étudiant</option>
+						<option value="supprimer">supprimer un étudiant</option>
+					</select>
+					<input form="etudiant" type="submit" value="OK">
 				</div>
     		</div>
     		<div class="contenu">
        			<h3>Services Notes</h3> 
 	   			<hr>
-	   			<div>
+	   			<div class="input-field">
 	   				<form>
 						<div>
 							<label>numéro Etudiant
@@ -55,9 +58,12 @@
 					</form>
 	   			</div>
 	   			<div>
-				 <input form="" type="submit" name="ajouterNote" value="ajouterNote">
-				 <input form="" type="submit" name="supprimerNote" value="supprimerNote">
-				 <input form="" type="submit" name="modifierNote" value="modifierNote">
+				 	<select name="options-list">
+						<option value="ajouter">ajouter une note</option>
+						<option value="modifier">modifier une note</option>
+						<option value="supprimer">supprimer une note</option>
+					</select>
+					<input form="" type="submit" value="OK">
 				</div>
     		</div>
     	</div>

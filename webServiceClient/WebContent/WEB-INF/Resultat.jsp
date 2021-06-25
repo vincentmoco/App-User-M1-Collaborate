@@ -5,6 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Page Résultat</title>
+		<link rel="stylesheet" href="app.css">
 	</head>
 	<body>
 		<div>

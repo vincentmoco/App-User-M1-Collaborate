@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
 
+body {
+	background : linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(45,253,188,0.9724090319721639) 100%) no-repeat fixed;
+}
+
+.container {
+	color : #ffffff;
+}
+
+.container hr {
+	border: 1px solid #ffffff;
+}
+
+.container input[type=text] {
+	border-style: solid;
+	border-radius : 10px;
+}
+
+.container input:hover {
+	border-color: #ff0066;
+}
+
+.input-field div {
+	padding: 4px;
+}
+
+
 
 
