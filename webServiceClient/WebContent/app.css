@@ -14,12 +14,28 @@ body {
 }
 
 .container input[type=text] {
-	border-style: solid;
-	border-radius : 10px;
+	border: solid white;
+	border-radius: 10px;
 }
 
-.container input:hover {
+.container input[type=text]:hover {
 	border-color: #ff0066;
+}
+
+.container input[type=submit] {
+	border-color: #ff0066;
+	background-color: #ff0066;
+	border-radius: 7px;
+	border-style: solid;
+	color: white;
+	
+}
+
+.container select {
+	border-color: #d9d9d9;
+	background-color: #d9d9d9;
+	border-style: solid;
+	border-radius: 7px;
 }
 
 .input-field div {
