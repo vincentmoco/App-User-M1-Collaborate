@@ -1,12 +1,12 @@
-# CRUD-SOAP-v1
+# CRUD-SOAP-v1 #
 
-## Environement
+## Environement ##
 
-Eclipse 
-Java jdk 1.8
-JRE 8
+*Eclipse 
+*Java jdk 1.8
+*JRE 8
 
-## Auteur
+## Auteur ##
 Kenny Loui-Joseph Dogué, Ricky Katumba Nkuna, Vincent Moco
 
 
