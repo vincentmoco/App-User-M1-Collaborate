@@ -66,6 +66,15 @@
 					<input form="" type="submit" value="OK">
 				</div>
     		</div>
+    		<button id="btnInformations">Informations</button>
+    		<div id="myWindow" class="info-window">
+    			<div class="info-window-content">
+    				<span class="close-info">&times;</span>
+    				<p>Bienvenue sur le client de notre service web</p>
+    				<p>Pour utiliser les fonction d'un service veuillez renseigner tout ses champs</p>
+    			</div>
+    		</div>
     	</div>
+    	<script src="app.js"></script>
 	</body>
 </html>
