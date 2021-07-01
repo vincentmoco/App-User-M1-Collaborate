@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from NoteService WSDL service -->
+
+  <service name="Note" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws"/>
+      <parameter name="wsdlServiceElement" value="NoteService"/>
+      <parameter name="schemaQualified" value="http://ws"/>
+      <parameter name="wsdlServicePort" value="Note"/>
+      <parameter name="className" value="ws.Note"/>
+      <parameter name="wsdlPortType" value="Note"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws" xmlns:retNS="http://ws" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="ajouterNote" qname="operNS:ajouterNote" returnQName="retNS:ajouterNoteReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:idEtudiant" type="tns:string"/>
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:note" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws" xmlns:retNS="http://ws" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="modifierNote" qname="operNS:modifierNote" returnQName="retNS:modifierNoteReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:idEtudiant" type="tns:string"/>
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:note" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ws" xmlns:retNS="http://ws" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="listerNote" qname="operNS:listerNote" returnQName="retNS:listerNoteReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://ws" xmlns:retNS="http://ws" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="supprimerNote" qname="operNS:supprimerNote" returnQName="retNS:supprimerNoteReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:idEtudiant" type="tns:string"/>
+        <parameter xmlns:pns="http://ws" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:note" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="modifierNote listerNote ajouterNote supprimerNote"/>
+
+  </service>
+</deployment>

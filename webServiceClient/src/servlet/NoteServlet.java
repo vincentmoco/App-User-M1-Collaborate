@@ -7,19 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ws.EtudiantProxy;
+import ws.NoteProxy;
 
 /**
- * Servlet implementation class EtudiantServlet
+ * Servlet implementation class NoteServlet
  */
-@WebServlet("/EtudiantServlet")
-public class EtudiantServlet extends HttpServlet {
+@WebServlet("/NoteServlet")
+public class NoteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EtudiantServlet() {
+    public NoteServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,19 +36,20 @@ public class EtudiantServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nom = request.getParameter("nomEtudiant");
-		String prenom = request.getParameter("prenomEtudiant");
 		String idEtudiant = request.getParameter("idEtudiant");
+		String note = request.getParameter("noteEtudiant");
 		String action = request.getParameter("options-list");
-		EtudiantProxy service = new EtudiantProxy();
+		NoteProxy service = new NoteProxy();
 		String resultat = null;
 		
 		if (action.equals("ajouter")) {
-			resultat = service.ajouterEtudiant(idEtudiant, prenom, nom);
-		} else if (action.equals("lister")) {
-			resultat = service.lister();
-		}else if (action.equals("supprimer")) {
-			resultat = service.supprimerEtudiant(idEtudiant);
+			resultat = service.ajouterNote(idEtudiant, note);
+		} else if (action.equals("supprimer")) {
+			resultat = service.supprimerNote(idEtudiant, note);
+		}  else if (action.equals("lister")) {
+			resultat = service.listerNote();
+		} else if (action.equals("modifier")) {
+			resultat = service.modifierNote(idEtudiant, note);
 		}
 		
 		request.setAttribute("resultat", resultat);

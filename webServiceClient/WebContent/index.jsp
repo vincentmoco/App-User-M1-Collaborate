@@ -32,9 +32,9 @@
 					</form>
 				</div>
 				<div>
-					<select name="options-list">
+					<select form="etudiant" name="options-list">
 						<option value="ajouter">ajouter un étudiant</option>
-						<option value="modifier">modifier un étudiant</option>
+						<option value="lister">lister les étudiants</option>
 						<option value="supprimer">supprimer un étudiant</option>
 					</select>
 					<input form="etudiant" type="submit" value="OK">
@@ -44,7 +44,7 @@
        			<h3>Services Notes</h3> 
 	   			<hr>
 	   			<div class="input-field">
-	   				<form>
+	   				<form action="http://localhost:8080/webServiceClient//NoteServlet" method="POST" id="note" name="note">
 						<div>
 							<label>numéro Etudiant
 								<input type="text" name="idEtudiant">
@@ -58,12 +58,13 @@
 					</form>
 	   			</div>
 	   			<div>
-				 	<select name="options-list">
+				 	<select form="note" name="options-list">
 						<option value="ajouter">ajouter une note</option>
+						<option value="lister">lister les notes</option>
 						<option value="modifier">modifier une note</option>
 						<option value="supprimer">supprimer une note</option>
 					</select>
-					<input form="" type="submit" value="OK">
+					<input form="note" type="submit" value="OK">
 				</div>
     		</div>
     		<button id="btnInformations">Informations</button>
@@ -71,7 +72,13 @@
     			<div class="info-window-content">
     				<span class="close-info">&times;</span>
     				<p>Bienvenue sur le client de notre service web</p>
-    				<p>Pour utiliser les fonction d'un service veuillez renseigner tout ses champs</p>
+    				<p>Les paramètres des différents services</p>
+    				<p>Ajouter Etudiant : nom, prénom, identifiant</p>
+    				<p>Supprimer Etudiant : identifiant</p>
+    				<p>lister les Etudiant : Aucun paramètres</p><br>
+    				<p>Ajouter Note : note, identifiant</p>
+    				<p>Supprimer Note : note, identifiant</p>
+    				<p>Modifier Note : note, identifiant</p>
     			</div>
     		</div>
     	</div>

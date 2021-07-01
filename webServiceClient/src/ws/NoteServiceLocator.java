@@ -1,5 +1,5 @@
 /**
- * EtudiantServiceLocator.java
+ * NoteServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package ws;
 
-public class EtudiantServiceLocator extends org.apache.axis.client.Service implements ws.EtudiantService {
+public class NoteServiceLocator extends org.apache.axis.client.Service implements ws.NoteService {
 
-    public EtudiantServiceLocator() {
+    public NoteServiceLocator() {
     }
 
 
-    public EtudiantServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public NoteServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public EtudiantServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public NoteServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for Etudiant
-    private java.lang.String Etudiant_address = "http://localhost:8080/webServiceBackend/services/Etudiant";
+    // Use to get a proxy class for Note
+    private java.lang.String Note_address = "http://localhost:8080/webServiceBackend/services/Note";
 
-    public java.lang.String getEtudiantAddress() {
-        return Etudiant_address;
+    public java.lang.String getNoteAddress() {
+        return Note_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String EtudiantWSDDServiceName = "Etudiant";
+    private java.lang.String NoteWSDDServiceName = "Note";
 
-    public java.lang.String getEtudiantWSDDServiceName() {
-        return EtudiantWSDDServiceName;
+    public java.lang.String getNoteWSDDServiceName() {
+        return NoteWSDDServiceName;
     }
 
-    public void setEtudiantWSDDServiceName(java.lang.String name) {
-        EtudiantWSDDServiceName = name;
+    public void setNoteWSDDServiceName(java.lang.String name) {
+        NoteWSDDServiceName = name;
     }
 
-    public ws.Etudiant getEtudiant() throws javax.xml.rpc.ServiceException {
+    public ws.Note getNote() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(Etudiant_address);
+            endpoint = new java.net.URL(Note_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getEtudiant(endpoint);
+        return getNote(endpoint);
     }
 
-    public ws.Etudiant getEtudiant(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public ws.Note getNote(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            ws.EtudiantSoapBindingStub _stub = new ws.EtudiantSoapBindingStub(portAddress, this);
-            _stub.setPortName(getEtudiantWSDDServiceName());
+            ws.NoteSoapBindingStub _stub = new ws.NoteSoapBindingStub(portAddress, this);
+            _stub.setPortName(getNoteWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
         }
     }
 
-    public void setEtudiantEndpointAddress(java.lang.String address) {
-        Etudiant_address = address;
+    public void setNoteEndpointAddress(java.lang.String address) {
+        Note_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (ws.Etudiant.class.isAssignableFrom(serviceEndpointInterface)) {
-                ws.EtudiantSoapBindingStub _stub = new ws.EtudiantSoapBindingStub(new java.net.URL(Etudiant_address), this);
-                _stub.setPortName(getEtudiantWSDDServiceName());
+            if (ws.Note.class.isAssignableFrom(serviceEndpointInterface)) {
+                ws.NoteSoapBindingStub _stub = new ws.NoteSoapBindingStub(new java.net.URL(Note_address), this);
+                _stub.setPortName(getNoteWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("Etudiant".equals(inputPortName)) {
-            return getEtudiant();
+        if ("Note".equals(inputPortName)) {
+            return getNote();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://ws", "EtudiantService");
+        return new javax.xml.namespace.QName("http://ws", "NoteService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://ws", "Etudiant"));
+            ports.add(new javax.xml.namespace.QName("http://ws", "Note"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class EtudiantServiceLocator extends org.apache.axis.client.Service imple
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("Etudiant".equals(portName)) {
-            setEtudiantEndpointAddress(address);
+if ("Note".equals(portName)) {
+            setNoteEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

@@ -44,16 +44,22 @@ public class EtudiantProxy implements ws.Etudiant {
     return etudiant;
   }
   
-  public java.lang.String methodeTest() throws java.rmi.RemoteException{
+  public java.lang.String ajouterEtudiant(java.lang.String idEtudiant, java.lang.String prenomEtudiant, java.lang.String nomEtudiant) throws java.rmi.RemoteException{
     if (etudiant == null)
       _initEtudiantProxy();
-    return etudiant.methodeTest();
+    return etudiant.ajouterEtudiant(idEtudiant, prenomEtudiant, nomEtudiant);
   }
   
-  public java.lang.String ajouterEtudiant(java.lang.String nom, java.lang.String prenom, java.lang.String numeroEtudiant) throws java.rmi.RemoteException{
+  public java.lang.String lister() throws java.rmi.RemoteException{
     if (etudiant == null)
       _initEtudiantProxy();
-    return etudiant.ajouterEtudiant(nom, prenom, numeroEtudiant);
+    return etudiant.lister();
+  }
+  
+  public java.lang.String supprimerEtudiant(java.lang.String idEtudiant) throws java.rmi.RemoteException{
+    if (etudiant == null)
+      _initEtudiantProxy();
+    return etudiant.supprimerEtudiant(idEtudiant);
   }
   
   

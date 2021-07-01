@@ -3,3 +3,7 @@ encoding//src/ws/Etudiant.java=UTF-8
 encoding//src/ws/EtudiantService.java=UTF-8
 encoding//src/ws/EtudiantServiceLocator.java=UTF-8
 encoding//src/ws/EtudiantSoapBindingStub.java=UTF-8
+encoding//src/ws/Note.java=UTF-8
+encoding//src/ws/NoteService.java=UTF-8
+encoding//src/ws/NoteServiceLocator.java=UTF-8
+encoding//src/ws/NoteSoapBindingStub.java=UTF-8
