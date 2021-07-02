@@ -8,6 +8,9 @@
 
 ## Auteur ##
 Kenny Loui-Joseph Dogué, Ricky Katumba Nkuna, Vincent Moco
+* moco.vincent@gmail.com
+* kennyljd@gmail.com
+* rickynkuna@gmail.com
 
 
 
